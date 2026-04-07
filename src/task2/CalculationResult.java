@@ -1,4 +1,4 @@
-package task2;
+
 import java.io.Serializable;
 
 public class CalculationResult implements Serializable {

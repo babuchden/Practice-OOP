@@ -1,4 +1,4 @@
-package task2;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -15,13 +15,12 @@ public class Main {
         System.out.println("\n--- Результат ---");
         System.out.println(res);
 
-        // Збереження (Серіалізація)
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filename))) {
             out.writeObject(res);
             System.out.println("\nЗбережено у файл!");
         } catch (IOException e) { e.printStackTrace(); }
 
-        // Відновлення (Десеріалізація)
+    
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename))) {
             CalculationResult restored = (CalculationResult) in.readObject();
             System.out.println("\n--- Відновлено ---");

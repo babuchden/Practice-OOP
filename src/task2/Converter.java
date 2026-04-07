@@ -1,4 +1,4 @@
-package task2;
+
 
 public class Converter {
     public CalculationResult convert(int value) {
